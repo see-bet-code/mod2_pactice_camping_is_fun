@@ -1,0 +1,12 @@
+<%= form_for @camper do |f| %>
+    <% if flash[:errors] %>
+        <% flash[:errors].each do |e| %>
+            <%= e %>
+        <% end %>
+    <% end %>
+    <%= f.label :name, "Camper name: "%>
+    <%= f.text_field :name%>
+    <%= f.label :Age, "Age: "%>
+    <%= f.collection_select :age, (8..18), :to_i, :to_s, include_blank: false %>
+    <%= f.submit  %>
+<% end %>

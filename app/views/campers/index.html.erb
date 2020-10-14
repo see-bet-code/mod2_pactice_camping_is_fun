@@ -1,7 +1,5 @@
 <h1>All The Campers</h1>
 
 <ul>
-  <% @campers.each do |camper| %>
-    <li><%= camper.name %></li>
-  <% end %>
+  <%= render @campers %>
 </ul>
