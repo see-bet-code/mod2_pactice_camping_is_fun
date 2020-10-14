@@ -9,6 +9,6 @@
     <%= f.label :activity_id, "Activity: "%>
     <%= f.collection_select :activity_id, Activity.all, :id, :name%>
     <%= f.label :time, "Time: "%>
-    <%= f.text_field :time%>
+    <%= f.collection_select :time, (0..23), :to_i, :to_s, include_blank: false %>
     <%= f.submit  %>
 <% end %>
